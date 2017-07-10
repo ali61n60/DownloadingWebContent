@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using Android.Util;
 
 namespace DownloadingWebContent
 {
@@ -14,8 +15,8 @@ namespace DownloadingWebContent
             // Set our view from the "main" layout resource
             SetContentView (Resource.Layout.Main);
             DownloadTask task=new DownloadTask();
-            task.Execute("http://www.asriran.com");
-            
+            string result= task.Execute("https://www.google.com").GetResult();
+            Log.Info("Google", result);
         }
     }
 }
