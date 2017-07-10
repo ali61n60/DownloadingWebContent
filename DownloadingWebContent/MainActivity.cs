@@ -12,7 +12,10 @@ namespace DownloadingWebContent
             base.OnCreate(bundle);
 
             // Set our view from the "main" layout resource
-            // SetContentView (Resource.Layout.Main);
+            SetContentView (Resource.Layout.Main);
+            DownloadTask task=new DownloadTask();
+            task.Execute("http://www.asriran.com");
+            
         }
     }
 }
